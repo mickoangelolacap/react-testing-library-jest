@@ -6,12 +6,15 @@ export const replaceCamelWithSpaces = (colorname) => {
   return colorname.replace(/\B([A-Z])\B/g, ' $1')
 }
 
+export const red = replaceCamelWithSpaces('MediumVioletRed')
+export const blue = replaceCamelWithSpaces('MidnightBlue')
+
 function App() {
 
-  const [buttonColor, setButtonColor] = useState('red')
+  const [buttonColor, setButtonColor] = useState(red)
   const [disabled, setDisabled] = useState(false)
 
-  const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
+  const newButtonColor = buttonColor === red ? blue : red;
 
   return (
     <div >
