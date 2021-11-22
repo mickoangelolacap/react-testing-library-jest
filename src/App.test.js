@@ -31,3 +31,18 @@ test('initial conditions', () => {
   const checkbox = screen.getByRole('checkbox')
   expect(checkbox).not.toBeChecked()
 })
+
+test('onchange conditions', () => {
+  render(<App />)
+
+  const checkbox = screen.getByRole('checkbox')
+  const colorButton = screen.getByRole('button')
+
+  fireEvent.click(checkbox)
+  expect(colorButton).toBeDisabled()
+  expect(checkbox).toBeChecked()
+
+  fireEvent.click(checkbox)
+  expect(colorButton).toBeEnabled()
+  expect(checkbox).not.toBeChecked()
+})
