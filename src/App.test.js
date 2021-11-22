@@ -35,7 +35,7 @@ test('initial conditions', () => {
 test('onchange conditions', () => {
   render(<App />)
 
-  const checkbox = screen.getByRole('checkbox')
+  const checkbox = screen.getByRole('checkbox', { name: 'Disable button' })
   const colorButton = screen.getByRole('button')
 
   fireEvent.click(checkbox)
