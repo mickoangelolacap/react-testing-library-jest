@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       >
         Change to {newButtonColor}
       </button>
+      <input type="checkbox" />
     </div>
   );
 }
